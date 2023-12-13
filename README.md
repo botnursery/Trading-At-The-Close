@@ -21,10 +21,7 @@ near_price - The crossing price that will maximize the number of shares matched 
 [bid/ask]_size - The dollar notional amount on the most competitive buy/sell level in the non-auction book.\
 wap - The weighted average price in the non-auction book.
 
-wap:
-$$
-\frac{ {BidPrice * AskSize + AskPrice * BidSize}}{BidSize + AskSize}
-$$
+wap: $\frac{ {BidPrice * AskSize + AskPrice * BidSize}}{BidSize + AskSize}$
 
 seconds_in_bucket - The number of seconds elapsed since the beginning of the day's closing auction, always starting from 0.
 target - The 60 second future move in the wap of the stock, less the 60 second future move of the synthetic index. Only provided for the train set.
@@ -32,10 +29,7 @@ target - The 60 second future move in the wap of the stock, less the 60 second f
    - The unit of the target is basis points, which is a common unit of measurement in financial markets. A 1 basis point price move is equivalent to a 0.01% price move.
    - Where t is the time at the current observation, we can define the target:
 
-Target:
-$$
-Target = (\frac{StockWAP_{t+60}}{StockWAP_{t}} - \frac{IndexWAP_{t+60}}{IndexWAP_{t}}) * 10000
-$$
+$Target = (\frac{StockWAP_{t+60}}{StockWAP_{t}} - \frac{IndexWAP_{t+60}}{IndexWAP_{t}}) * 10000$
 
 # Observations
 
