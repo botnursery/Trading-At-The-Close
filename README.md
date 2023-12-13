@@ -31,7 +31,7 @@ target - The 60 second future move in the wap of the stock, less the 60 second f
 
 $Target = (\frac{StockWAP_{t+60}}{StockWAP_{t}} - \frac{IndexWAP_{t+60}}{IndexWAP_{t}}) * 10000$
 
-# The project part links:
+# The study result links
 
 The research on the deta set was conducted and documented in Jupyter Lab and can be downloaded here:
 - [Jupyter Notebook format](https://github.com/botnursery/Trading-At-The-Close/blob/main/optiver.df.train.analysis.ipynb)
@@ -41,8 +41,9 @@ The visual report is uploaded to .html and can be viewed here:
 
 # Observations
 
+- The date set is quite large and contains 5237980 entries for 200 securities over a period of 480 days.
+- Not all stocks have the same number of days in price history. For example, no.79 - 300 days, 102 - 186, 135 - 290, 153 - 411, 199 - 393.
 - With the exception of the far_price and near_price fields, the number of NaN values in the remaining fields is statistically small, one thousandth of a percent of the total number of records.
-- Not all stocks have the same number of days in price history 480. For example, no.79 - 300 days, 102 - 186, 135 - 290, 153 - 411, 199 - 393.
 - Weighted average price wap of securities are presented in the form of normalized values. The first value for the selected day is taken as 1 and then all 10 second ticks are given relative to it. For the next day, everything is repeated again starting from 1.
 - There is asymmetry in Target values for different securities (200 items), which indicates the presence of possible trends:\
     Min-skew=-8.58188, Median-skew=-0.00941, Max-skew=7.59506\
@@ -51,6 +52,6 @@ The visual report is uploaded to .html and can be viewed here:
 - The distribution has the form characteristic of financial instruments with Fat-Tailed probability distributions.
 - The histogram of all Target values for all time and for all securities has some periodic comb superimposed on the bell-shaped distribution.
 - This periodicity indicates the presence among securities of those whose Target values more often fall into periodic bins. As the bin size increases, this effect is smoothed out due to averaging. For individual securities this deviation is not noticeable.
-- This effect can possibly be used to increase the probability of predicting the Target value. Further research can be supplemented in the following areas:
+- This effect may be possibly be used to increase the probability of predicting the Target value. Further research can be supplemented in the following areas:
     - select those bins that stand out significantly in the distribution histogram and see which securities fall into them more often, forming a pattern.
     - find out whether the comb is strictly periodic, for this we can try to apply the discrete Fourier transform to the envelope of the final histogram.
