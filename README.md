@@ -31,6 +31,14 @@ target - The 60 second future move in the wap of the stock, less the 60 second f
 
 $Target = (\frac{StockWAP_{t+60}}{StockWAP_{t}} - \frac{IndexWAP_{t+60}}{IndexWAP_{t}}) * 10000$
 
+# The project part links:
+
+The research on the deta set was conducted and documented in Jupyter Lab and can be downloaded here:
+- [Jupyter Notebook format](https://github.com/botnursery/Trading-At-The-Close/blob/main/optiver.df.train.analysis.ipynb)
+
+The visual report is uploaded to .html and can be viewed here:
+- [Web page format](https://github.com/botnursery/Trading-At-The-Close/blob/main/optiver.df.train.analysis.html) TBU
+
 # Observations
 
 - With the exception of the far_price and near_price fields, the number of NaN values in the remaining fields is statistically small, one thousandth of a percent of the total number of records.
