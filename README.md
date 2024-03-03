@@ -111,5 +111,5 @@ This is clearly visible when selecting fairly narrow histogram bins. When the bi
 The research on the dataset was conducted and documented in JyputerLab and the notebook file can be downloaded here:
 - [Jupyter Notebook format](https://github.com/botnursery/Trading-At-The-Close/blob/main/optiver.df.train.analysis.ipynb)
 
-The visual report is uploaded to .html and can be viewed here:
-- [Web page format](https://github.com/botnursery/Trading-At-The-Close/blob/main/optiver.df.train.analysis.html) TBU
+The source data is also imported into Power BI format .pbix and can be viewed and downloaded here:
+- [Power BI format](https://drive.google.com/file/d/1-9knjxEHYbQ6U2QLUYcMpFrzfq_QYjKn/view?usp=sharing)
